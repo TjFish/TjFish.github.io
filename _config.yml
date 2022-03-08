@@ -26,8 +26,8 @@ title: TjFish                          # the main title
 
 tagline: 记录生活   # it will display as the sub-title
 
-description: >-                        # used by seo meta and the atom feed
-  目前同济大学软件工程学院在读研究生-研究方向密码学-兴趣方向多元.
+description: 目前同济大学软件工程学院在读研究生-研究方向密码学-兴趣方向多元. # used by seo meta and the atom feed
+
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://tjfish.github.io'
