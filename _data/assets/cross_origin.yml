@@ -2,16 +2,16 @@
 
 cdns:
   # Google Fonts
-  - url: https://fonts.googleapis.com
-  - url: https://fonts.gstatic.com
+  - url: https://fonts.proxy.ustclug.org
+  - url: https://fonts-gstatic.proxy.ustclug.org
     args: crossorigin
-  - url: https://fonts.googleapis.com
+  - url: https://fonts.proxy.ustclug.org
   # jsDelivr CDN
   - url: https://cdn.jsdelivr.net
 
 # fonts
 
-webfonts: https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
+webfonts: https://fonts.proxy.ustclug.org/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
 
 # Libraries
 
