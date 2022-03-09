@@ -4,7 +4,17 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About Me
+> 这里是 TjFish 的个人博客
+{: .prompt-tip }
+
+<span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次 </span>
+
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+> 关于我
+> {: .prompt-info }
 
 本科：同济大学 软件工程 本科 软件学院
 
@@ -18,5 +28,4 @@ order: 4
 
 
 
-> 这里是 TjFish 的个人博客
-> {: .prompt-tip }
+
