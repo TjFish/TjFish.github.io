@@ -1,12 +1,10 @@
 ---
 title: 软件建模课程——论文阅读Product Backlog
-date: 2022-03-10
+date: 2022-03-09
 categories: [课程/软件建模]
-tags: [课程，软件建模]   
+tags: [课程,软件建模]   
 img_path: /assets/img/
 ---
-
-# 软件建模课程——论文阅读Product Backlog
 
 原文：https://ieeexplore.ieee.org/document/8812076
 

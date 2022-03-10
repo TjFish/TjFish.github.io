@@ -29,7 +29,7 @@ img_path: /assets/img/
 兴趣：Oracle Apex，软件开发
 
 > 一杯茶
-{: .prompt-tip }
+{: .prompt-danger }
 
 **微信**
 

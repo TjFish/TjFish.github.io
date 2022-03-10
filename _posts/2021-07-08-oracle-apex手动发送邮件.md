@@ -6,8 +6,6 @@ tags: [Oracle Apex]
 img_path: /assets/img/
 ---
 
-# Oracle Apex 手动发送邮件
-
 ## 开启ACL权限
 
 首先要开启用户的ACL权限（ Access Control List）
