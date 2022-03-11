@@ -16,9 +16,9 @@ platforms:
   #   link: "https://t.me/share/url?url=URL&text=TITLE"
 
   -
-  type: QQ
-  icon: "fab fa-qq"
-  link: "http://connect.qq.com/widget/shareqq/index.html?url=URL&text=TITLE"
+    type: QQ
+    icon: "fab fa-qq"
+    link: "http://connect.qq.com/widget/shareqq/index.html?url=URL&text=TITLE"
 
   # Uncomment below if you need to.
   # -

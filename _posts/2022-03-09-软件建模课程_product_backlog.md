@@ -6,7 +6,7 @@ tags: [课程,软件建模]
 img_path: /assets/img/
 ---
 
-原文：https://ieeexplore.ieee.org/document/8812076
+原文：[https://ieeexplore.ieee.org/document/8812076](https://ieeexplore.ieee.org/document/8812076)
 
 
 ## 脑图
