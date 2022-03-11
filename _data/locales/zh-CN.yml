@@ -11,8 +11,8 @@ layout:
 tabs:
   # format: <filename_without_extension>: <value>
   home: 首页
-  categories: 分类查看
-  tags: 标签查看
+  categories: 分类
+  tags: 标签
   archives: 所有文章
   about: 关于作者
 
