@@ -11,14 +11,14 @@ layout:
 tabs:
   # format: <filename_without_extension>: <value>
   home: 首页
-  categories: 分类
-  tags: 标签
-  archives: 归档
-  about: 关于
+  categories: 分类查看
+  tags: 标签查看
+  archives: 所有文章
+  about: 关于作者
 
 # the text displayed in the search bar & search results
 search:
-  hint: 搜索
+  hint: 搜索文章
   cancel: 取消
   no_results: 搜索结果为空
 
@@ -26,6 +26,7 @@ panel:
   lastmod: 最近更新
   trending_tags: 热门标签
   toc: 文章内容
+  search_more: 搜索文章
 
 copyright:
   # Shown at the bottom of the post
