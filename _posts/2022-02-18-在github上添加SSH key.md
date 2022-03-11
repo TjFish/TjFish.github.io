@@ -7,9 +7,9 @@ img_path: /assets/img
 ---
 
 
-通过在 github 上添加 SSH key，不需要每次push 和 clone 时都输入密码。
+通过在 github 上添加 SSH key，实现**免密登录**，不需要每次push 和 clone 时都输入密码。
 
-## https 和 SSH 的区别：
+## Https和 SSH 的区别：
 
 - 前者可以随意克隆github上的项目，而不管是谁的；而后者则是你必须是你要克隆的项目的拥有者或管理员，且需要先添加 SSH key ，否则无法克隆。
 - https url 在push的时候是需要验证用户名和密码的；而 SSH 在push的时候，是不需要输入用户名的，如果配置SSH key的时候设置了密码，则需要输入密码的，否则直接是不需要输入密码的。
