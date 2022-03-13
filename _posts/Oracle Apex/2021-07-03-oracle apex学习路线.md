@@ -92,16 +92,24 @@ css文件同理
 
 ### 插件
 
-有许多朋友开发了apex的插件（插件就相当于扩展apex默认提高的区域/组件）
+有许多朋友开发了apex的插件（插件就相当于扩展apex默认提供的区域/组件）
 
-[apexworld](https://apex.world/ords/f?p=100:1:::NO:::) 是关于apex的开源社区，里面提供了许多apex的插件。
+- [apexworld](https://apex.world/ords/f?p=100:1:::NO:::) 是关于apex的开源社区，里面提供了许多apex的插件。下载插件后，导入插件也很简单，流程和导入应用一样。
 
-下载插件后，导入插件也很简单，流程和导入应用一样。
+- [ronnyweiss](https://ronnyweiss.app/)
+- [APEXbyG.blogspot.com](https://apex.oracle.com/pls/apex/f?p=100309:1:101247674562108:::::)
 
-## 更多资源
+### 开源应用
 
-- [Oracle Apex教程（从19.1版开始）| Vinish Kapoor的博客](https://www.foxinfotech.in/2019/11/oracle-apex-tutorials-version-19-1-onwards.html)
+- [官方应用](https://apex.oracle.com/zh-cn/solutions/apps/)
 
+- [Apex 博客](https://github.com/jariolaine/apex-blog)
+
+- [Awesome Oracle APEX](https://github.com/Dani3lSun/awesome-orclapex)
+
+## 更多学习资源
+
+- [Oracle Apex教程| Vinish Kapoor的博客](https://www.foxinfotech.in/2019/11/oracle-apex-tutorials-version-19-1-onwards.html)
 - [Ottmar with APEX](https://ogobrecht.github.io/)
-
-- [Oracle APEX 系列文章10：Oracle APEX Evangelion（EVA 补完计划） | 钢钢更新](https://wangfanggang.com/Oracle/Oracle-APEX/apex-series-10/)
+- [Oracle APEX 系列文章10：Oracle APEX Evangelion | 钢钢更新](https://wangfanggang.com/Oracle/Oracle-APEX/apex-series-10/)
+- https://github.com/Dani3lSun/awesome-orclapex#apps
