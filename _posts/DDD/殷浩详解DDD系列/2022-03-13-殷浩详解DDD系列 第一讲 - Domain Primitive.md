@@ -7,7 +7,6 @@ img_path: /assets/img/
 math: true
 author:
   name: 殷浩
-  link: guangmiao.lgm@alibaba-inc.com
 ---
 
 **简介：** 写在最前面 对于一个架构师来说，在软件开发中如何降低系统复杂度是一个永恒的挑战，无论是94年GoF的Design Patterns，99年的Martin Fowler的Refactoring，02年的P of EAA，还是03年的Enterprise Integration Patterns，都是通过一系列的设计模式或范例来降低一些常见的复杂度。但是问题在于，这些书的理念是通过技术手段解
