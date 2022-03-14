@@ -30,7 +30,7 @@ description: 目前同济大学软件工程学院在读研究生-研究方向密
 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://tjfish.github.io'
+url: 'https://tjfish.top/'
 
 github:
   username: TjFish             # change to your github username
@@ -46,7 +46,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/TjFish       # change to your github homepage
+    - https://tjfish.top/      # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username

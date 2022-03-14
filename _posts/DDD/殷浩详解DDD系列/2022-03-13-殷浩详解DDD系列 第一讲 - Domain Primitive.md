@@ -33,6 +33,8 @@ author:
 - 基于事件驱动的架构的挑战
 - 等等
 
+
+## 第一讲 - Domain Primitive
 今天先给大家带来一篇最基础，但极其有价值的Domain Primitive的概念.
 
 就好像在学任何语言时首先需要了解的是基础数据类型一样，在全面了解DDD之前，首先给大家介绍一个最基础的概念: Domain Primitive（DP）。
