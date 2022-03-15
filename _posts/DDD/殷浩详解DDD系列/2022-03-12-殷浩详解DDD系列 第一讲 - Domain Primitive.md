@@ -1,6 +1,6 @@
 ---
 title: 殷浩详解DDD系列 第一讲 - Domain Primitive
-date: 2022-03-13
+date: 2022-03-12
 categories: [殷浩详解DDD系列]
 tags: [DDD]   
 img_path: /assets/img/

@@ -38,3 +38,18 @@ img_path: /assets/img/
 **支付宝**
 
 ![支付宝](about.assets/支付宝.png)
+
+<script src="https://giscus.app/client.js"
+        data-repo="TjFish/TjFish.github.io"
+        data-repo-id="R_kgDOG90Emg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOG90Ems4COBNe"
+        data-mapping="title"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
