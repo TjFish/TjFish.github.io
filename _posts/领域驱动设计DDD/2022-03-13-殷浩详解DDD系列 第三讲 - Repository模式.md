@@ -4,7 +4,6 @@ date: 2022-03-13
 categories: [领域驱动设计DDD]
 tags: [DDD]   
 img_path: /assets/img/
-math: true
 author:
   name: 殷浩
 ---
