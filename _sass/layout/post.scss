@@ -354,6 +354,10 @@ nav[data-toggle=toc] {
   .post-content > p > img {
     max-width: calc(100% + 1rem);
   }
+
+  .post-content {
+    h1, h2, h3, h4 {font-weight:600};
+  }
 }
 
 /* Hide SideBar and TOC */
