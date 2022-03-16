@@ -1,7 +1,7 @@
 ---
 title: 殷浩详解DDD系列 第三讲 - Repository模式
 date: 2022-03-13
-categories: [殷浩详解DDD系列]
+categories: [领域驱动设计DDD]
 tags: [DDD]   
 img_path: /assets/img/
 math: true
