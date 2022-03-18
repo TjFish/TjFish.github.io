@@ -1,0 +1,56 @@
+## 配置方法
+
+### Maven 配置
+
+打开 Maven 的配置文件(windows机器一般在maven安装目录的conf/settings.xml)，在`<mirrors></mirrors>`标签中添加 mirror 子节点:
+
+```js
+<mirror>
+    <id>aliyunmaven</id>
+    <mirrorOf>*</mirrorOf>
+    <name>阿里云公共仓库</name>
+    <url>https://maven.aliyun.com/repository/public</url>
+</mirror>
+```
+
+如果想使用其它代理仓库,可在`<repositories></repositories>`节点中加入对应的仓库使用地址。以使用spring代理仓为例：
+
+```js
+<repository>
+    <id>spring</id>
+    <url>https://maven.aliyun.com/repository/spring</url>
+    <releases>
+        <enabled>true</enabled>
+    </releases>
+    <snapshots>
+        <enabled>true</enabled>
+    </snapshots>
+</repository>
+```
+
+### gradle 配置
+
+在 build.gradle 文件中加入以下代码:
+
+```js
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenLocal()
+        mavenCentral()
+    }
+}
+```
+
+如果想使用 maven.aliyun.com 提供的其它代理仓，以使用 spring 仓为例，代码如下:
+
+```js
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/'}
+        mavenLocal()
+        mavenCentral()
+    }
+}
+```
