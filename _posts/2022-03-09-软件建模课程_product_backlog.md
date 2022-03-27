@@ -1,7 +1,7 @@
 ---
-title: 软件建模课程——论文阅读Product Backlog
+title: 软件建模——论文阅读Product Backlog
 date: 2022-03-09
-categories: [课程/软件建模]
+categories: [课程]
 tags: [课程,软件建模]   
 img_path: /assets/img/
 ---
