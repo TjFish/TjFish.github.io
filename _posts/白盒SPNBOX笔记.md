@@ -1,0 +1,104 @@
+**简评：本文是对Space-Hardness一文的补充，主要贡献在于完善了Sparc-Hardness攻击者的安全模型。同时提出了SPNBOX新方案，考虑并行化和硬件优化，效率相交于SPACE有了数倍提升。**
+
+原文：[Towards Practical Whitebox Cryptography: Optimizing Efficiency and Space Hardness](https://link.springer.com/chapter/10.1007/978-3-662-53887-6_5)
+
+# 1. Introduction
+
+## 白盒的应用场景
+
+- 云服务DRM场景
+- NFC付款场景
+
+![image-20220326145448501](白盒SPNBOX笔记.assets/image-20220326145448501.png)
+
+这些场景给出了在服务下的新的攻击模式
+
+- 共享缓存攻击：cache attacks，云服务器上的内存资源是共享的，攻击者可以利用共享的内存数据来进行攻击
+- 密钥恢复攻击：常规的黑盒场景，攻击者试图恢复密钥。
+- 密钥提取攻击：常规的白盒场景，攻击者试图从白盒实现中提取密钥。
+- 代码提升攻击（decomposition attacks or code lifting attack）：攻击者窃取一部分的白盒实现，试图加密或解密数据。
+
+## 贡献点
+
+- 设计了新的白盒方法，**SPNbox**。效率相较于SPACE有数倍的提升，并且可以用到硬件加速。
+- 对SPNbox在黑盒环境下做了安全性分析。
+- 重新定义了代码分解攻击设定
+- 给出了Space-Hard的可证明安全的上界。
+
+# 2 SPNbox: Efficient Space-Hard Block Ciphers
+
+## 设计决策
+
+- From Feistel to nested SPN：从Fristel结构到嵌套SPN结构（nested SPN structure）：
+  - 考虑到并行的要求，从Feistel结构切换到SPN结构。
+  - 考虑到要适用于不同内存大小的场景，使用nested SPN structure。
+  - 考虑到硬件加速的需求，AES不能有截断（SPACE方案对AES作了128->120的截断）
+  - 考虑高效率的解密操作，用了MDS矩阵
+- Efficient Constant-Time Small Block Ciphers：使用 高效率的恒定时间的小规模加密算法
+
+## 设计实现
+
+### 总体思路
+
+SPNbox 的输入是n=128bit，分成t组，每组大小为n-in = n/t bit。n-in = 的取值有8，16，24，32。置换操作共有10轮，每轮的变换如下。
+
+![image-20220326154339266](白盒SPNBOX笔记.assets/image-20220326154339266.png)
+
+- S 是一个小型加密器层，仿照AES实现（The Underlying Small Block Ciphers）
+
+
+- θ是线性扩散层，就是乘以一个MDS矩阵
+- σr是仿射层，操作就是加上每轮的常量C，常量C有轮数决定。
+
+### S层：The Underlying Small Block Ciphers
+
+  - S本身就是一个block cipher，内部需要做很多轮（R-in），基本思路就是参照AES每一轮做实现。
+
+    ![image-20220326162046969](白盒SPNBOX笔记.assets/image-20220326162046969.png)
+
+  - R-32 = 16, R-24 = 20, R-16 = 32 and R-8 = 64.
+
+  - S每一轮操作如下图，首先经过一个非线性S-box，然后做MC = MixCloumn，最后AK=加上每一轮的密钥Key。当n-in = 32时，这个加密器和AES每一轮变换是一样的。
+
+![image-20220326154856759](白盒SPNBOX笔记.assets/image-20220326154856759.png)
+
+# 3. Security in the Black Box: Analysis as a Block Cipher
+
+黑盒的安全性分析
+
+这一部分主要是依赖于AES的安全性。
+
+# 4. Security in the White Box: Analysis of Space Hardness
+
+白盒的安全性分析
+
+## 4.1Key Extraction and Table Decomposition Attacks
+
+安全性可以规约到内置的小型加密器的密钥提取问题上，也就是AES困难假设上。
+
+## 4.2 Existing Notions of Space Hardness
+
+把week-space-hard 和 strong space-hard 区分开
+
+![image-20220326195153460](白盒SPNBOX笔记.assets/image-20220326195153460.png)
+
+![image-20220326195202561](白盒SPNBOX笔记.assets/image-20220326195202561.png)
+
+## 4.3 Target Construction
+
+将白盒加密过程形式化归类为下图，，输入明文，输出密文。白盒加密分为R轮，每一轮有T个查找表。攻击者可以看到整个执行环境。
+
+![image-20220326195222933](白盒SPNBOX笔记.assets/image-20220326195222933.png)
+
+## 4.4 Adversary Models of Space Hardness
+
+进一步定义了攻击者的能力，攻击模式有三种 know-space，chosen-space，adaptively-chosen space
+
+![image-20220326195602163](白盒SPNBOX笔记.assets/image-20220326195602163.png)
+
+- known-space attack：模拟的是攻击者被动的接收到一些信息。
+- chosen-space attack：模拟的是攻击者可以选择接收那些信息。
+- adaptively-chosen-space attack：模拟的是攻击者可以自适应的选择接收信息，对执行环境有完全控制权。和最开始的白盒环境定义相同。
+
+
+
