@@ -37,3 +37,14 @@ git config --global i18n.logoutputencoding utf-8	# 输出 log 编码
 关掉所有终端，重新打开查看效果
 
 ![image-20220531003724773](2022-05-31-git设置解决windows中文乱码.assets/image-20220531003724773.png)
+
+# 解决warning: LF will be replaced by CRLF"
+
+参考链接https://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar
+
+windows问题
+
+```
+git config --global core.autocrlf false
+```
+
