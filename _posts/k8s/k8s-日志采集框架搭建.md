@@ -6,7 +6,9 @@ tags: [k8s]
 img_path: /assets/img/
 ```
 
-## 日志采集架构
+学校信息办需要搭建统一的日志中心，将大部分服务的日志都迁移到日志中心上来。之前查看日志都是登录到应用部署的机器上，手动查看日志文件，很不方便。有了日志中心后，可以在一处查看所有服务的日志，方便运维管理，快速排查问题。这些天基于ELK+Filebeat在k8s集群上搭建了一套日志采集+日志存储+日志检索的日志中心服务，整个中间也遇到了很多问题，也学到了许多，在此做些记录。
+
+# 日志采集架构
 
 k8s官方提供了三种日志采集的解决方案，分别是节点日志采集代理，以 sidecar 容器收集日志，直接从应用程序收集日志。
 
@@ -30,7 +32,7 @@ k8s官方提供了三种日志采集的解决方案，分别是节点日志采�
 
 ![含日志代理的边车容器](k8s-日志采集框架搭建.assets/logging-with-sidecar-agent.png)
 
-## Filebeat日志采集
+# Filebeat日志采集
 
 [Filebeat](https://www.elastic.co/cn/beats/filebeat)是一款轻量型日志采集器，相比于logstash需要消耗500M左右内存，Filebeat只需要10M左右内存就可以完成工作。Filebeat和Elasticsearch的结合也非常不错。
 
@@ -117,7 +119,7 @@ namei /var/log/containers/xxx.log
 
 我希望实现只收集属于我的项目的日志，根据环境不同输出到Elasticsearch的不同index。测试环境以test开头，生产环境以prod开头。参考[官网文档](https://www.elastic.co/guide/en/beats/filebeat/7.10/index.html)设置
 
-## processss配置
+### processss配置
 
 下方配置主要添加了kubernetes相关的元数据，然后去掉了一些无用字段。通过kubernetes元数据，可以根据命名空间和部署应用名不同来输出到不同的index中。
 
@@ -160,3 +162,12 @@ namei /var/log/containers/xxx.log
             kubernetes.namespace: "open-platform"
 ```
 
+# 最终效果
+
+花费了几天时间，不断查找资料终于实现了比较满意的结果。最终效果可以在Kibana页面统一查看所有服务的日志。每个服务按照环境分开单独生成一份日志index。由于日志数量不大，暂定每个月进行一次分片，后续观察日志的大小再做调整。
+
+![image-20220802165032218](k8s-日志采集框架搭建.assets/image-20220802165032218.png)
+
+
+
+![。image-20220802165309191](k8s-日志采集框架搭建.assets/image-20220802165309191.png)
