@@ -1,5 +1,5 @@
 ```
-title: 分布式-MapReduce
+title: 分布式MapReduce
 date: 2022-08-01
 categories: [分布式]
 tags: [分布式]   
