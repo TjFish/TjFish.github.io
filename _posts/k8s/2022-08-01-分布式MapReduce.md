@@ -1,10 +1,10 @@
-```
+---
 title: 分布式MapReduce
 date: 2022-08-01
 categories: [分布式]
 tags: [分布式]   
 img_path: /assets/img/
-```
+---
 
 最近暑假在家有空，跟着[MIT分布式系统课程]( https://pdos.csail.mit.edu/6.824/index.html)学一学分布式系统，顺便跟着课程实验学一学go，希望能在开学前学完吧。
 
