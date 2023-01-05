@@ -1,10 +1,10 @@
 ---
 title: 《clean code》读后感
-date: 2022-05-06
+date: 2022-12-06
 categories: [领域驱动设计DDD]
 tags: [设计模式,读后感]   
 img_path: /assets/img/ 
-
+pin: true
 ---
 
 读完《clean code》一书，有些想法，想要记录下来。
